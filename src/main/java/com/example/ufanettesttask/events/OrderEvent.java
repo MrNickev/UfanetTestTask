@@ -1,14 +1,6 @@
 package com.example.ufanettesttask.events;
 
-import com.google.gson.annotations.Expose;
-import jakarta.persistence.*;
 import lombok.*;
-import lombok.experimental.SuperBuilder;
-import org.springframework.context.ApplicationEvent;
-import org.springframework.lang.NonNull;
-
-import java.time.Clock;
-import java.time.Instant;
 import java.time.LocalDateTime;
 
 public abstract class OrderEvent {
@@ -20,7 +12,7 @@ public abstract class OrderEvent {
     private transient Integer employeeId;
 
     @Builder.Default
-    private transient LocalDateTime date = LocalDateTime.now();
+    private final transient LocalDateTime date = LocalDateTime.now();
 
 
     public Integer getOrderId() {

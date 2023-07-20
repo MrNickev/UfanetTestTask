@@ -1,19 +1,6 @@
 package com.example.ufanettesttask.events;
 
-import com.example.ufanettesttask.entities.OrderStatus;
-import com.fasterxml.jackson.annotation.JsonFormat;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Inheritance;
-import jakarta.persistence.InheritanceType;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.experimental.SuperBuilder;
-
-import java.math.BigDecimal;
-import java.time.Instant;
 import java.time.LocalDateTime;
-import java.util.UUID;
 
 public class RegisterOrderEvent extends OrderEvent {
     private Integer clientId;

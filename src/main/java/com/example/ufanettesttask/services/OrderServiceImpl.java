@@ -30,7 +30,7 @@ public class OrderServiceImpl implements OrderService{
 
         var order = new Order();
         order.orderId = id;
-        order.status = events.stream().max((e1, e2) -> e1.getStatus().compare(e2.getStatus())).get().getStatus().toString();
+        order.status = events.stream().max((e1, e2) -> e1.getStatus().compare(e2.getStatus())).get().getStatus();
         order.events = events;
         return order;
     }
